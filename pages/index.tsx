@@ -85,7 +85,9 @@ const Home: NextPage = () => {
               {address ? (
                 !isClaimIneleigibilityLoading ? (
                   claimIneleigibility?.length! > 0 ? (
-                    claimIneleigibility?.map((reason) => <p>{reason}</p>)
+                    claimIneleigibility?.map((reason, index) => (
+                      <p key={index}>{reason}</p>
+                    ))
                   ) : (
                     <div>
                       <p>
